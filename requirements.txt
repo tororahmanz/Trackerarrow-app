@@ -1,0 +1,23 @@
+# trackerarrow — Python dependencies (MVP)
+# Install: pip install -r requirements.txt
+
+# --- UI & auth ---
+streamlit>=1.42          # st.login (OIDC) & st.navigation
+Authlib>=1.3.2           # dipakai st.login
+streamlit-agraph>=0.0.45 # graf relasi wallet (vis.js)
+pandas>=2.2
+
+# --- Database ---
+SQLAlchemy>=2.0
+psycopg[binary]>=3.2     # driver PostgreSQL (produksi); lokal bisa pakai SQLite bawaan
+
+# --- Worker & HTTP ---
+httpx>=0.27              # Alchemy, Helius, DexScreener, Telegram Bot API
+
+# --- Konfigurasi ---
+python-dotenv>=1.0
+tzdata                   # data zona waktu (wajib di Windows)
+
+# Rencana v0.2 (webhook real-time):
+# fastapi>=0.115
+# uvicorn[standard]>=0.30
